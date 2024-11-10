@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=DynaPuff:wght@400..700&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <title>Rick & Morty</title>
+    <style>
+        h1{
+            color: #55AD9B;
+            text-align: center;
+            font-family: 'DynaPuff';
+            font-size: 3rem;
+        }
+
+        body{
+            background: #000;
+        }
+        .characters{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+        .card{border-radius: 10px;
+            
+            border: solid #55AD9B 3px;
+            width: 250px;
+            height: auto;
+            text-align: center;
+            padding-top:10px ;
+            margin: 30px;
+            color: aliceblue;
+            /* grid-area: 2 / 2 / 3 / 5; */
+        }
+
+
+        .card:nth-child(2n){
+            background: #F1F8E8;
+            color: #000;
+        }
+
+        button{
+            padding: 10px;
+            /* background-color: ; */
+            border: solid #55AD9B 3px;
+            color: #55AD9B;
+            background: #000;
+            border-radius: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <h1>Web APP con API Rick and Morty</h1>
+
+        <div class="search">
+            <select name="gender" id="gender">
+                <option value="male">Hombre</option>
+                <option value="female">Mujer</option>
+                <option value="ganderless">Sin Género</option>
+                <option value="unknow">No específico</option>
+            </select>
+        </div>
+        <div class="buttons"></div>
+        <div class="characters">
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

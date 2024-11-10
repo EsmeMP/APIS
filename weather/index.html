@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=DynaPuff:wght@400..700&family=Indie+Flower&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <title>Web de Clima</title>
+    <style>
+        h1{
+            color: #06283D;
+            font-size: 3rem;
+        }
+        body{
+            background-color: #DFF6FF;
+            font-family: "DynaPuff", serif;
+        }
+        .contain{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: normal;
+            align-items: normal;
+            align-content: normal;
+            /* text-align: center */
+            align-items: center;
+            align-content: center;
+        }
+        .contain div{
+            padding:  10px 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom:10px ;
+        }
+        .contain h2{
+            color: #082f48;
+        }
+        .contain p{
+            color: #1363DF;
+        }
+        #mostrarClima{
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: auto;
+            order: 0;
+        }
+        #buscarClima{
+            
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: auto;
+            order: 0;
+        }
+        input{
+            background: #DFF6FF;
+            border-radius: 5px;
+            padding:6px;
+            width: 200px;
+        }
+        button{
+            background-color: #DFF6FF;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        input:hover{
+            background-color: #2b5261;
+            color: #DFF6FF;
+        }
+        button:hover{
+            background-color: #2b5261;
+            color: #DFF6FF;
+        }
+        a{
+            position: fixed;
+            text-decoration: none;
+            color: #DFF6FF;
+            background-color: #06283D;
+            border-radius: 50%;
+            padding: 5px;
+            border: #06283D solid 2px;
+        }
+        a:hover{
+            background-color: #DFF6FF;
+            color: #06283D;
+        }
+        .anterior {
+            top: 10px;
+            left: 10px;
+        }
+
+        .siguiente {
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../rick&morty/index.html" class="anterior">↩</a>
+    <a href="#siguiente" class="siguiente">↪</a>
+    <div class="contain">
+        <h1>El Clima...</h1>
+        <div id="mostrarClima">
+        </div>
+        <div id="buscarClima">
+            <input type="text" id="cityInput" placeholder="Ingrese la ciudad/país/continente" />
+            <button id="buscar">Buscar</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
