@@ -93,18 +93,22 @@ divButtons.addEventListener('click', (e)=>{
     }
 });
 
-
-async function getCharactersByGender(pages=1) {
-    try{
-        const result = await fetch(URL_BASE + '/character/?gender=' + gender);
-        const data = await result.json()
-        const characters = data.results;
-        createCards();
-    }catch(error){
-
+async function getCharactersByGender(gender) {
+    try {
+        const result = await fetch(`${URL_BASE}/character/?gender=${gender}`);
+        const data = await result.json();
+        createCards(data.results);
+    } catch (error) {
+        console.error('Error fetching characters by gender:', error);
     }
 }
 getCharacters(gender)
+
+document.querySelector('#gender').addEventListener('change', (e) => {
+    const gender = e.target.value;
+    getCharactersByGender(gender);
+});
+
 
 divButtons.addEventListener('click', (e)=>{
     if(e.target.classList.contains('btn')){
@@ -114,8 +118,3 @@ divButtons.addEventListener('click', (e)=>{
         createButton();
     }
 });
-
-document.querySelector('#gender')
-    .addEventListener('change', (e) => {
-        getCharactersByGender(e.target.value);
-    })

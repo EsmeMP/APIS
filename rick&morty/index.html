@@ -11,7 +11,7 @@
         h1{
             color: #55AD9B;
             text-align: center;
-            font-family: 'DynaPuff';
+            font-family: 'DynaPuff', cursive;
             font-size: 3rem;
         }
 
@@ -50,12 +50,47 @@
             color: #55AD9B;
             background: #000;
             border-radius: 10px;
-            
+            font-family: 'DynaPuff', cursive;
+            position:absolute;
+            top: 120px;
+            right: 50px;
+        }
+        select{
+            background-color: #F1F8E8;
+            border-radius: 5px;
+            padding: 5px;
+            font-family: 'DynaPuff', cursive;
+            color: #55AD9B;
+            margin: 0 5%;
+        }
+        a{
+            position: fixed;
+            text-decoration: none;
+            color: #55AD9B;
+            background-color: #DFF6FF;
+            border-radius: 50%;
+            padding: 10px;
+            border: #06283D solid 2px;
+        }
+        a:hover{
+            background-color: #55AD9B;
+            color: #06283D;
+        }
+        .anterior {
+            top: 10px;
+            left: 10px;
+        }
+
+        .siguiente {
+            top: 10px;
+            right: 10px;
         }
     </style>
 </head>
 <body>
     <div class="contain">
+        <a href="../weather/index.html" class="anterior">↩</a>
+        <a href="../weather/index.html" class="siguiente">↪</a>
         <h1>Web APP con API Rick and Morty</h1>
 
         <div class="search">
